@@ -4,8 +4,10 @@
   </head>
   <body id="body1">
     <h1>Es1</h1>
+    <h1 id="h1bella">Bella</h1>
     <p>
-      Pagina html statica, ma co jQuery
+      Pagina html statica, includi file javascript, aggiungi un bottone,
+      aggiungi un click listener al bottone che cambia il contenutodi un tag span e il contenuto e colore di un div, ma con jQuery
     </p>
     
     <span id="span1">C'è un bottone:</span>
@@ -18,6 +20,17 @@
     <br/><br />
 
     <script src="es2.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script> 
+    <script>
+        //console.log($("div")[0]); //$ crea array con tutti le componenti che rispondo alla stringa inserita
+        //$("#h1bella").html("antani");//html setta contenuto di innerHTML
+        //console.log($("#h1bella")[0].innerHTML); //se voglio ricercare una componenete per di uso #(con innerHTML mi ritorna direttamente il contenuto)
+        var CACCOLA=($("<h3>CACCOLA</h3>"));
+        $("body").append(CACCOLA);
+        $("#span1").html("span cambiato");
+        $("#div1").html("<h1>CAMBIATO</h1");
+        $("#div1").attr("style","background-color: rgb(163, 36, 68");
+
+    </script>
   </body>
 </html>
