@@ -25,12 +25,15 @@
         //console.log($("div")[0]); //$ crea array con tutti le componenti che rispondo alla stringa inserita
         //$("#h1bella").html("antani");//html setta contenuto di innerHTML
         //console.log($("#h1bella")[0].innerHTML); //se voglio ricercare una componenete per di uso #(con innerHTML mi ritorna direttamente il contenuto)
-        var CACCOLA=($("<h3>CACCOLA</h3>"));
-        $("body").append(CACCOLA);
-        $("#span1").html("span cambiato");
-        $("#div1").html("<h1>CAMBIATO</h1");
-        $("#div1").attr("style","background-color: rgb(163, 36, 68");
-
+        var change=function(){
+          $("#span1").html("span cambiato");
+          $("#div1").html("<h1>CAMBIATO</h1");
+          $("#div1").attr("style","background-color: rgb(163, 36, 68");
+        }
+        var btn=$("<button id=\"button\">Click Me!</button>");
+        btn.on("click", change);//on crea un ascoltatore definendo tipo di trigger e la funzione
+        btn.html("NON premere");
+        $("body").append(btn); //append inserisce alla fine del tag l'elemento inserito e quindi lo aggiunge al dom        
     </script>
   </body>
 </html>
